@@ -2,7 +2,10 @@ import serial
 
 import pygame
 
-arduino_conn = serial.Serial('/dev/ttyACM0', 9600, timeout=0)
+try:
+    arduino_conn = serial.Serial('/dev/ttyACM0', 9600, timeout=0)
+except:
+    print('no arduino')
 
 pygame.mixer.pre_init(44100, -16, 2, 1024)
 pygame.mixer.init()
