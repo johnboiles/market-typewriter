@@ -1,4 +1,5 @@
 import serial
+import time
 
 import pygame
 
@@ -18,7 +19,10 @@ track_1 = pygame.mixer.Sound('/home/herb/mspf_audio/01.wav')
 
 
 key_channel.play(key_noise)
-track_channel.play(track_1)
+# track_channel.play(track_1)
+time.sleep(2)
+key_noise.play()
+
 
 while False:
     key = arduino_conn.read()
