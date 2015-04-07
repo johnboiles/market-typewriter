@@ -65,6 +65,6 @@ if __name__ == '__main__':
             keystroke_sound = keystroke_sounds[keystroke_index]
             keystroke_channel.play(keystroke_sound)
 
-            print("Queueing quote %s" % quote_filenames[index % len(quotes)])
+            logging.debug("Queueing quote %s" % quote_filenames[index % len(quotes)])
             quote = quotes[index % len(quotes)]
             quote_channel.queue(quote)
